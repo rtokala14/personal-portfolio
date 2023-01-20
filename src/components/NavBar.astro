@@ -1,5 +1,7 @@
 ---
 import ThemeToggle from "./ThemeToggle";
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1);
 ---
 
 <div
@@ -10,25 +12,25 @@ import ThemeToggle from "./ThemeToggle";
   <nav class="flex gap-0 md:gap-4 text-xl items-center">
     <a
       href="/"
-      class="hover:bg-tertiary dark:hover:bg-Dtertiary hover:text-tint px-2 hover:cursor-pointer rounded-md p-1"
+      class={`hover:bg-tertiary dark:hover:bg-Dtertiary hover:text-tint px-2 hover:cursor-pointer rounded-md p-1 ${
+        currentPath === "" ? " underline underline-offset-2" : ""
+      } `}
     >
       Home
     </a>
     <a
       href="/projects"
-      class="hover:bg-tertiary dark:hover:bg-Dtertiary hover:text-tint px-2 hover:cursor-pointer rounded-md p-1"
+      class={`hover:bg-tertiary dark:hover:bg-Dtertiary hover:text-tint px-2 hover:cursor-pointer rounded-md p-1 ${
+        currentPath === "projects" ? " underline underline-offset-2 " : ""
+      }`}
     >
       Projects
     </a>
-    <!-- <a
-      href="/timeline"
-      class="hover:bg-tertiary dark:hover:bg-Dtertiary hover:text-tint px-2 hover:cursor-pointer rounded-md p-1"
-    >
-      Timeline
-    </a> -->
     <a
       href="/contact"
-      class="hover:bg-tertiary dark:hover:bg-Dtertiary hover:text-tint px-2 hover:cursor-pointer rounded-md p-1"
+      class={`hover:bg-tertiary dark:hover:bg-Dtertiary hover:text-tint px-2 hover:cursor-pointer rounded-md p-1 ${
+        currentPath === "contact" ? " underline underline-offset-2 " : ""
+      }`}
     >
       Contact
     </a>
@@ -38,5 +40,4 @@ import ThemeToggle from "./ThemeToggle";
   >
     <ThemeToggle client:load />
   </div>
-  <!-- <div class="flex md:hidden items-center">T</div> -->
 </div>
