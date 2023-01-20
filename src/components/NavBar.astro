@@ -5,34 +5,38 @@ import ThemeToggle from "./ThemeToggle";
 <div
   class="flex items-center justify-between p-4 w-full h-11 shadow-sm shadow-tertiary dark:shadow-Dtertiary"
 >
-  <h1 class="hidden md:block text-2xl font-bold">Rohit Tokala</h1>
-  <h1 class="md:hidden text-4xl font-medium">RT</h1>
-  <nav class="hidden md:flex gap-0 md:gap-4 text-xl items-center">
-    <h2
+  <a href="/" class="hidden md:block text-2xl font-bold">Rohit Tokala</a>
+  <a href="/" class="md:hidden text-4xl font-medium">RT</a>
+  <nav class="flex gap-0 md:gap-4 text-xl items-center">
+    <a
+      href="/"
       class="hover:bg-tertiary dark:hover:bg-Dtertiary hover:text-tint px-2 hover:cursor-pointer rounded-md p-1"
     >
       Home
-    </h2>
-    <h2
+    </a>
+    <a
+      href="/projects"
       class="hover:bg-tertiary dark:hover:bg-Dtertiary hover:text-tint px-2 hover:cursor-pointer rounded-md p-1"
     >
       Projects
-    </h2>
-    <h2
+    </a>
+    <!-- <a
+      href="/timeline"
       class="hover:bg-tertiary dark:hover:bg-Dtertiary hover:text-tint px-2 hover:cursor-pointer rounded-md p-1"
     >
       Timeline
-    </h2>
-    <h2
+    </a> -->
+    <a
+      href="/contact"
       class="hover:bg-tertiary dark:hover:bg-Dtertiary hover:text-tint px-2 hover:cursor-pointer rounded-md p-1"
     >
       Contact
-    </h2>
+    </a>
   </nav>
   <div
-    class="hidden md:flex items-center dark:bg-Dtertiary bg-tertiary p-1 px-3 rounded-full"
+    class="flex items-center dark:bg-Dtertiary bg-tertiary p-1 px-3 rounded-full"
   >
     <ThemeToggle client:load />
   </div>
-  <div class="flex md:hidden items-center">T</div>
+  <!-- <div class="flex md:hidden items-center">T</div> -->
 </div>
