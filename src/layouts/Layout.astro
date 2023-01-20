@@ -1,4 +1,6 @@
 ---
+import "@fontsource/playfair-display";
+import NavBar from "../components/NavBar.astro";
 import ThemeToggle from "../components/ThemeToggle";
 
 export interface Props {
@@ -9,7 +11,7 @@ const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="bg-orange-600">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -17,8 +19,8 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="dark:bg-slate-700">
-    <ThemeToggle />
+  <body class="bg-tint dark:bg-Dtint font-sans text-primary dark:text-Dprimary">
+    <NavBar />
     <slot />
   </body>
 </html>
