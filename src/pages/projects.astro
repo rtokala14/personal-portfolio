@@ -3,5 +3,28 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Rohit's Projects">
-  <div>Projects</div>
+  <div class="min-h-full flex flex-col justify-center p-6">
+    <div
+      class="flex w-full items-center flex-col lg:flex-row lg:justify-evenly"
+    >
+      <div>
+        <h2 class="text-4xl font-medium">
+          A collection of my most recent and exciting projects.
+        </h2>
+        <h3 class="text-xl italic mt-4">
+          While on my journey to learn the ins and outs of web development, I
+          find the best way for me to understand how something works is to build
+          something with it. Below this 'mostly unnecessary but needed to fill
+          out the page because otherwise it looks weird' blurb, you will find
+          some of my projects that I am proud of.
+        </h3>
+      </div>
+      <div class="p-7">
+        <img
+          src="../src/assets/projects-illustration-bgRemoved.png"
+          class="rounded-lg w-96 h-auto lg:w-full"
+        />
+      </div>
+    </div>
+  </div>
 </Layout>
