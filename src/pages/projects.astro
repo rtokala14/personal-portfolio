@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import illustration from "../assets/projects-illustration-bgRemoved.png";
+import Card from "../components/Card.astro";
 ---
 
 <Layout title="Rohit's Projects">
@@ -23,6 +24,45 @@ import illustration from "../assets/projects-illustration-bgRemoved.png";
       <div class="p-7">
         <img src={illustration} class="rounded-lg w-96 h-auto lg:w-full" />
       </div>
+    </div>
+    <div
+      class="grid grid-flow-row md:grid-cols-2 md:gap-8 lg:grid-cols-4 gap-4 place-items-center"
+    >
+      <Card
+        name="Spreddit"
+        blurb="A fullstack clone of Reddit built on NextJs with TypeScript."
+        tags={["NextJs", "TailwindCSS", "Prisma", "tRPC"]}
+        gitLink="https://github.com/rtokala14/spreddit-t3"
+        liveLink="https://spreddit-t3.vercel.app/"
+      />
+      <Card
+        name="Spreddit"
+        blurb="A fullstack clone of Reddit built on NextJs with TypeScript."
+        tags={["NextJs", "TailwindCSS", "Prisma", "tRPC"]}
+        gitLink="https://github.com/rtokala14/spreddit-t3"
+        liveLink="https://spreddit-t3.vercel.app/"
+      />
+      <Card
+        name="Spreddit"
+        blurb="A fullstack clone of Reddit built on NextJs with TypeScript."
+        tags={["NextJs", "TailwindCSS", "Prisma", "tRPC"]}
+        gitLink="https://github.com/rtokala14/spreddit-t3"
+        liveLink="https://spreddit-t3.vercel.app/"
+      />
+      <Card
+        name="Spreddit"
+        blurb="A fullstack clone of Reddit built on NextJs with TypeScript."
+        tags={["NextJs", "TailwindCSS", "Prisma", "tRPC"]}
+        gitLink="https://github.com/rtokala14/spreddit-t3"
+        liveLink="https://spreddit-t3.vercel.app/"
+      />
+      <Card
+        name="Spreddit"
+        blurb="A fullstack clone of Reddit built on NextJs with TypeScript."
+        tags={["NextJs", "TailwindCSS", "Prisma", "tRPC"]}
+        gitLink="https://github.com/rtokala14/spreddit-t3"
+        liveLink="https://spreddit-t3.vercel.app/"
+      />
     </div>
   </div>
 </Layout>

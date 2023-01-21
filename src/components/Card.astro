@@ -1,21 +1,43 @@
 ---
 export interface Props {
-  title: string;
-  body: string;
-  href: string;
+  name: string;
+  blurb: string;
+  gitLink: string;
+  liveLink: string;
+  tags: string[];
 }
 
-const { href, title, body } = Astro.props;
+const { name, blurb, gitLink, liveLink, tags } = Astro.props;
 ---
 
-<li class="link-card">
-  <a href={href}>
-    <h2>
-      {title}
-      <span>&rarr;</span>
-    </h2>
-    <p>
-      {body}
-    </p>
-  </a>
-</li>
+<div
+  class="w-80 shadow-md shadow-tertiary dark:shadow-Dtertiary gap-3 flex flex-col rounded-md p-3"
+>
+  <h4 class="text-xl font-medium">{name}</h4>
+  <p class="text-base font-light italic">{blurb}</p>
+  <div class="flex gap-2 items-center">
+    {
+      tags.map((tag) => (
+        <div class=" p-1 px-2 rounded-sm text-sm border border-primary dark:border-Dtertiary">
+          {tag}
+        </div>
+      ))
+    }
+  </div>
+  <div class="w-full flex justify-between items-center">
+    <a
+      target="_blank"
+      rel="noreferrer"
+      href={gitLink}
+      class="p-2 px-4 border border-tertiary bg-tertiary text-tint hover:bg-tint hover:text-primary dark:border-Dtertiary rounded-md"
+      >Source Code</a
+    >
+    <a
+      target="_blank"
+      rel="noreferrer"
+      href={liveLink}
+      class="p-2 px-4 border border-tertiary bg-tertiary text-tint hover:bg-tint hover:text-primary dark:border-Dtertiary rounded-md"
+      >Live Preview</a
+    >
+  </div>
+</div>
