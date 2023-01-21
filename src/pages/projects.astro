@@ -1,6 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import illustration from "../assets/projects-illustration-bgRemoved.png";
+import SpredditImg from "../assets/spreddit-thumb.png";
+import ThreeterImg from "../assets/threeter-thumb.png";
+import GroceryImg from "../assets/grocery-thumb.png";
+import NewsImg from "../assets/news-thumb.png";
+import WeatherImg from "../assets/weather-thumb.png";
 import Card from "../components/Card.astro";
 ---
 
@@ -31,37 +36,49 @@ import Card from "../components/Card.astro";
       <Card
         name="Spreddit"
         blurb="A fullstack clone of Reddit built on NextJs with TypeScript."
-        tags={["NextJs", "TailwindCSS", "Prisma", "tRPC"]}
+        tags={["NextJs", "TailwindCSS", "Prisma", "tRPC", "postgreSQL"]}
         gitLink="https://github.com/rtokala14/spreddit-t3"
         liveLink="https://spreddit-t3.vercel.app/"
+        image={SpredditImg}
       />
       <Card
-        name="Spreddit"
-        blurb="A fullstack clone of Reddit built on NextJs with TypeScript."
-        tags={["NextJs", "TailwindCSS", "Prisma", "tRPC"]}
-        gitLink="https://github.com/rtokala14/spreddit-t3"
-        liveLink="https://spreddit-t3.vercel.app/"
+        name="Threeter"
+        blurb="A fullstack clone of Twitter built on NextJs with TypeScript."
+        tags={[
+          "NextJs",
+          "TailwindCSS",
+          "Prisma",
+          "tRPC",
+          "NextAuth",
+          "postgreSQL",
+        ]}
+        gitLink="https://github.com/rtokala14/threeter"
+        liveLink="https://threeter.vercel.app/"
+        image={ThreeterImg}
       />
       <Card
-        name="Spreddit"
-        blurb="A fullstack clone of Reddit built on NextJs with TypeScript."
-        tags={["NextJs", "TailwindCSS", "Prisma", "tRPC"]}
-        gitLink="https://github.com/rtokala14/spreddit-t3"
-        liveLink="https://spreddit-t3.vercel.app/"
+        name="Grocery List"
+        blurb="A Grocery List tracker that syncs data with a mongoDB backend. "
+        tags={["NextJs", "TailwindCSS", "Prisma", "tRPC", "mongoDB"]}
+        gitLink="https://github.com/rtokala14/grocery-list"
+        liveLink="https://grocery-list-vert.vercel.app/"
+        image={GroceryImg}
       />
       <Card
-        name="Spreddit"
-        blurb="A fullstack clone of Reddit built on NextJs with TypeScript."
-        tags={["NextJs", "TailwindCSS", "Prisma", "tRPC"]}
-        gitLink="https://github.com/rtokala14/spreddit-t3"
-        liveLink="https://spreddit-t3.vercel.app/"
+        name="News Website"
+        blurb="A webpage that sources news articles using the mediastack API."
+        tags={["NextJs", "TailwindCSS", "graphQL", "StepZen"]}
+        gitLink="https://github.com/rtokala14/news-app"
+        liveLink="http://news-app-chi-sandy.vercel.app/"
+        image={NewsImg}
       />
       <Card
-        name="Spreddit"
-        blurb="A fullstack clone of Reddit built on NextJs with TypeScript."
-        tags={["NextJs", "TailwindCSS", "Prisma", "tRPC"]}
-        gitLink="https://github.com/rtokala14/spreddit-t3"
-        liveLink="https://spreddit-t3.vercel.app/"
+        name="Weather App"
+        blurb="A weather app that shows weather by location using data from the openweathermap API."
+        tags={["TailwindCSS", "Vanilla JS"]}
+        gitLink="https://github.com/rtokala14/weather-app"
+        liveLink="https://weather-app-rtokala14.vercel.app/"
+        image={WeatherImg}
       />
     </div>
   </div>
