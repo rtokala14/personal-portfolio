@@ -14,7 +14,13 @@ const { name, blurb, gitLink, liveLink, tags, image } = Astro.props;
 <div
   class="w-80 shadow-md shadow-tertiary dark:shadow-Dtertiary gap-3 flex flex-col rounded-md"
 >
-  <img src={image} class="object-cover rounded-t-md" />
+  <img
+    alt={`${name}'s project screenshot'`}
+    src={image}
+    class="object-cover rounded-t-md"
+    width="320"
+    height="160"
+  />
   <div class="px-2 pb-2 flex flex-col gap-3">
     <h4 class="text-xl font-medium">{name}</h4>
     <p class="text-base font-light italic">{blurb}</p>
