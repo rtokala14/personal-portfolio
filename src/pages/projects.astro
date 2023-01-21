@@ -7,6 +7,7 @@ import GroceryImg from "../assets/grocery-thumb.png";
 import NewsImg from "../assets/news-thumb.png";
 import WeatherImg from "../assets/weather-thumb.png";
 import Card from "../components/Card.astro";
+import { Image } from "@astrojs/image/components";
 ---
 
 <Layout title="Rohit's Projects">
@@ -27,7 +28,12 @@ import Card from "../components/Card.astro";
         </h3>
       </div>
       <div class="p-7">
-        <img src={illustration} class="rounded-lg w-96 h-auto lg:w-full" />
+        <Image
+          alt="Illustration that shows a man coding ona  computer"
+          src={illustration}
+          format={"webp"}
+          class="rounded-lg w-96 h-auto lg:w-full"
+        />
       </div>
     </div>
     <div
