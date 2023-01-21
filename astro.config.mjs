@@ -7,14 +7,6 @@ import tailwind from "@astrojs/tailwind";
 import preact from "@astrojs/preact";
 
 // https://astro.build/config
-import image from "@astrojs/image";
-
-// https://astro.build/config
-import vercel from "@astrojs/vercel/serverless";
-
-// https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), preact(), image()],
-  output: "server",
-  adapter: vercel()
+  integrations: [tailwind(), preact()]
 });

@@ -1,13 +1,11 @@
 ---
-import { Image } from "@astrojs/image/components";
-
 export interface Props {
   name: string;
   blurb: string;
   gitLink: string;
   liveLink: string;
   tags: string[];
-  image: ImageMetadata;
+  image: string;
 }
 
 const { name, blurb, gitLink, liveLink, tags, image } = Astro.props;
@@ -16,12 +14,7 @@ const { name, blurb, gitLink, liveLink, tags, image } = Astro.props;
 <div
   class="w-80 shadow-md shadow-tertiary dark:shadow-Dtertiary gap-3 flex flex-col rounded-md"
 >
-  <Image
-    alt={`${name}'s screenshot'`}
-    format={"webp"}
-    src={image}
-    class="object-cover rounded-t-md"
-  />
+  <img src={image} class="object-cover rounded-t-md" />
   <div class="px-2 pb-2 flex flex-col gap-3">
     <h4 class="text-xl font-medium">{name}</h4>
     <p class="text-base font-light italic">{blurb}</p>
