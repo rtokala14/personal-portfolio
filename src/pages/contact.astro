@@ -1,7 +1,10 @@
 ---
+import ContactForm from "../components/ContactForm";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Contact Rohit Tokala">
-  <div class="h-full flex flex-row justify-center items-center">Contact</div>
+  <div class="h-full flex flex-row justify-center items-center">
+    <ContactForm client:visible />
+  </div>
 </Layout>
