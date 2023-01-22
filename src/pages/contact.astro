@@ -1,9 +1,6 @@
 ---
 import ContactForm from "../components/ContactForm";
 import Layout from "../layouts/Layout.astro";
-const pathname = new URL(Astro.request.url).pathname;
-const currentPath = pathname.slice(1);
-console.log(currentPath);
 ---
 
 <Layout title="Contact Rohit Tokala">
@@ -11,7 +8,6 @@ console.log(currentPath);
     class="flex flex-col md:flex-row gap-14 md:gap-0 justify-evenly mt-36 items-center"
   >
     <div>
-      <p>{currentPath}</p>
       <h2 class="text-3xl">Get in touch with me!</h2>
     </div>
     <ContactForm client:visible />
