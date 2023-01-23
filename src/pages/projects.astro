@@ -7,6 +7,7 @@ import GroceryImg from "../assets/grocery-thumb.webp";
 import NewsImg from "../assets/news-thumb.webp";
 import WeatherImg from "../assets/weather-thumb.webp";
 import Card from "../components/Card.astro";
+import Designing from "../assets/designing.gif";
 ---
 
 <Layout title="Rohit's Projects">
@@ -26,12 +27,26 @@ import Card from "../components/Card.astro";
           some of my projects that I am proud of.
         </h3>
       </div>
-      <div class="p-7">
+      <div class="flex flex-col items-center gap-0 p-7">
         <img
           alt="Illustration shwoing a man coding on a computer"
-          src={illustration}
-          class="rounded-lg w-96 h-96 lg:w-full lg:h-full"
+          src={Designing}
+          class="w-[512px] h-auto lg:w-[1250px] lg:h-auto"
         />
+        <div class="text-sm">
+          Illustration by <a
+            target="_blank"
+            rel="no_referrer"
+            class="underline"
+            href="https://icons8.com/illustrations/author/259416"
+            >Marina Green</a
+          > from <a
+            target="_blank"
+            rel="no_referrer"
+            class="underline"
+            href="https://icons8.com/illustrations">Ouch!</a
+          >
+        </div>
       </div>
     </div>
     <div

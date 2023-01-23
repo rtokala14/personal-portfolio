@@ -1,7 +1,28 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Programmer from "../assets/programmer.gif";
 ---
 
 <Layout title="Rohit Reddy Tokala">
   <div class="h-full flex flex-row justify-center">Test</div>
+  <div class="flex flex-col gap-1 items-center justify-center">
+    <img
+      src={Programmer}
+      class="w-[512px] h-auto lg:w-[1250px] lg:h-auto"
+      alt="Illustration of a man programming on a laptop"
+    />
+    <div class="text-sm">
+      Illustration by <a
+        target="_blank"
+        rel="no_referrer"
+        class="underline"
+        href="https://icons8.com/illustrations/author/259416">Marina Green</a
+      > from <a
+        target="_blank"
+        rel="no_referrer"
+        class="underline"
+        href="https://icons8.com/illustrations">Ouch!</a
+      >
+    </div>
+  </div>
 </Layout>
