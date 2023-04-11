@@ -1,10 +1,7 @@
-import ThemeChanger from "@/componenets/ThemeChanger";
-
 export default function Home() {
   return (
-    <main className="">
+    <main className=" h-screen">
       <div>Empty for now</div>
-      <ThemeChanger />
     </main>
   );
 }

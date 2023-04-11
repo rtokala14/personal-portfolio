@@ -22,13 +22,9 @@ function ThemeChanger() {
           setTheme("black");
         }
       }}
-      className=" btn btn-ghost p-2 btn-square"
+      className=" btn btn-ghost btn-square rounded-md"
     >
-      {theme === "black" ? (
-        <Moon className="w-6 h-6" />
-      ) : (
-        <Sun className="w-6 h-6" />
-      )}
+      {theme === "black" ? <Moon /> : <Sun />}
     </button>
   );
 }
