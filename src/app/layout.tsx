@@ -1,4 +1,5 @@
 import "./globals.css";
+import { ThemeProviders } from "../utils/themeProvider";
 
 export const metadata = {
   title: "Rohit Tokala",
@@ -11,8 +12,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html suppressHydrationWarning data-theme="black" lang="en">
+      <head />
+      <body>
+        <ThemeProviders>{children}</ThemeProviders>
+      </body>
     </html>
   );
 }
