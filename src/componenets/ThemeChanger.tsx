@@ -1,5 +1,6 @@
 "use client";
 
+import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
@@ -13,10 +14,22 @@ function ThemeChanger() {
 
   if (!mounted) return null;
   return (
-    <select value={theme} onChange={(e) => setTheme(e.target.value)}>
-      <option value="lofi">Light</option>
-      <option value="black">Dark</option>
-    </select>
+    <button
+      onClick={() => {
+        if (theme === "black") {
+          setTheme("lofi");
+        } else {
+          setTheme("black");
+        }
+      }}
+      className=" btn btn-ghost p-2 btn-square"
+    >
+      {theme === "black" ? (
+        <Moon className="w-6 h-6" />
+      ) : (
+        <Sun className="w-6 h-6" />
+      )}
+    </button>
   );
 }
 
