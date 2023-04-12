@@ -2,6 +2,7 @@ import "./globals.css";
 import { ThemeProviders } from "../utils/themeProvider";
 import Link from "next/link";
 import ThemeChanger from "@/components/ThemeChanger";
+import SideDrawer from "@/components/SideDrawer";
 
 export const metadata = {
   title: "Rohit Tokala",
@@ -77,40 +78,7 @@ export default function RootLayout({
               </nav>
               {children}
             </div>
-            <div className="drawer-side">
-              <label htmlFor="nav-drawer" className="drawer-overlay" />
-              <ul className="p-2 shadow items-center menu gap-1 bg-base-100 rounded-box w-80">
-                <li className="menu-title">
-                  <Link href="/">
-                    <h1 className=" text-3xl font-bold pb-2">Rohit Tokala</h1>
-                  </Link>
-                </li>
-                <li className="w-full">
-                  <Link
-                    className="btn btn-block rounded-md capitalize btn-ghost"
-                    href={"/about"}
-                  >
-                    About
-                  </Link>
-                </li>
-                <li className="w-full">
-                  <Link
-                    className="btn btn-block rounded-md capitalize btn-ghost"
-                    href={"/projects"}
-                  >
-                    Projects
-                  </Link>
-                </li>
-                <li className="w-full">
-                  <Link
-                    className="btn btn-block rounded-md capitalize btn-ghost"
-                    href={"/contact"}
-                  >
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
+            <SideDrawer />
           </div>
         </ThemeProviders>
       </body>
