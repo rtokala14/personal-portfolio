@@ -79,8 +79,13 @@ export default function RootLayout({
             </div>
             <div className="drawer-side">
               <label htmlFor="nav-drawer" className="drawer-overlay" />
-              <ul className="p-2 shadow menu gap-1 bg-base-100 rounded-box w-80">
-                <li>
+              <ul className="p-2 shadow items-center menu gap-1 bg-base-100 rounded-box w-80">
+                <li className="menu-title">
+                  <Link href="/">
+                    <h1 className=" text-3xl font-bold pb-2">Rohit Tokala</h1>
+                  </Link>
+                </li>
+                <li className="w-full">
                   <Link
                     className="btn btn-block rounded-md capitalize btn-ghost"
                     href={"/about"}
@@ -88,7 +93,7 @@ export default function RootLayout({
                     About
                   </Link>
                 </li>
-                <li>
+                <li className="w-full">
                   <Link
                     className="btn btn-block rounded-md capitalize btn-ghost"
                     href={"/projects"}
@@ -96,7 +101,7 @@ export default function RootLayout({
                     Projects
                   </Link>
                 </li>
-                <li>
+                <li className="w-full">
                   <Link
                     className="btn btn-block rounded-md capitalize btn-ghost"
                     href={"/contact"}
