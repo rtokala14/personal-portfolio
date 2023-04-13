@@ -3,6 +3,7 @@ import { ThemeProviders } from "../utils/themeProvider";
 import Link from "next/link";
 import ThemeChanger from "@/components/ThemeChanger";
 import SideDrawer from "@/components/SideDrawer";
+import { Github } from "lucide-react";
 
 export const metadata = {
   title: "Rohit Tokala",
@@ -72,6 +73,14 @@ export default function RootLayout({
                 </div>
                 <div className="navbar-end">
                   <div>
+                    <a
+                      rel="noreferer"
+                      target="_blank"
+                      href={"https://github.com/rtokala14"}
+                      className="btn btn-ghost btn-square rounded-md"
+                    >
+                      <Github />
+                    </a>
                     <ThemeChanger />
                   </div>
                 </div>
