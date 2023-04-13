@@ -25,7 +25,7 @@ export default function RootLayout({
           <div className="drawer">
             <input type="checkbox" id="nav-drawer" className="drawer-toggle" />
             <div className="drawer-content flex flex-col">
-              <nav className="sticky backdrop-blur-md navbar h-14 p-2 top-0 w-full flex items-center justify-between">
+              <nav className="sticky backdrop-blur-lg navbar h-14 p-2 top-0 w-full flex items-center justify-between">
                 <div className="navbar-start flex items-center gap-4">
                   <div className="md:hidden flex-none">
                     <label
