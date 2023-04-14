@@ -1,5 +1,3 @@
-import Image from "next/image";
-import programmerPic from "../../public/programmer_illustration.webp";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 
