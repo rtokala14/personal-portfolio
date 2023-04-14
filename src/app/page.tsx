@@ -6,7 +6,7 @@ import { ChevronDown } from "lucide-react";
 export default function Home() {
   return (
     <div className=" min-h-screen snap-proximity snap-y">
-      <div className="h-full snap-center pb-14 bg-base-200 flex flex-col lg:flex-row w-full items-center">
+      <div className="h-full snap-center pb-14 bg-base-200 flex flex-col w-full items-center">
         <div className=" px-4 w-full md:w-2/3 xl:w-1/2 flex flex-col items-start gap-1 my-auto">
           <h1 className=" text-4xl font-medium">{"Hi, I'm Rohit Tokala."}</h1>
           <p className=" text-sm italic">An aspiring full stack developer...</p>
