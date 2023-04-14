@@ -52,7 +52,7 @@ function ProjectsPage() {
           title="Portfolio"
           blurb="This Website! Built with Next13"
           tags={["Next.js 13", "TailwindCSS", "TypeScript", "DaisyUI"]}
-          gitLink="https://github.com/rtokala14/astro-portfolio"
+          gitLink="https://github.com/rtokala14/personal-portfolio"
           liveLink="https://tokala.dev"
         />
         <ProjectCard
