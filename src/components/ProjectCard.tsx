@@ -19,7 +19,12 @@ function ProjectCard({
   return (
     <div className="card card-bordered rounded-md w-96 bg-base-100 shadow-xl">
       <figure>
-        <Image src={thumb} alt="Project Thumbnail" />
+        <Image
+          src={thumb}
+          priority
+          placeholder="blur"
+          alt="Project Thumbnail"
+        />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
