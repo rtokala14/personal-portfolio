@@ -17,7 +17,7 @@ function ProjectCard({
   liveLink: string;
 }) {
   return (
-    <div className="card card-bordered rounded-md w-96 bg-base-100 shadow-xl">
+    <div className="card static card-bordered rounded-md w-96 bg-base-100 shadow-xl">
       <figure>
         <Image
           src={thumb}
