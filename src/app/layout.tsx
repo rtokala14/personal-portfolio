@@ -8,6 +8,7 @@ import { Github } from "lucide-react";
 export const metadata = {
   title: "Rohit Tokala",
   description: "Personal website of Rohit Tokala",
+  metadataBase: new URL("https://tokala.dev/"),
 };
 
 export default function RootLayout({

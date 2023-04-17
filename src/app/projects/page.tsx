@@ -5,6 +5,11 @@ import NoteifyThumb from "../../../public/noteify-thumb.webp";
 import NewsThumb from "../../../public/news-thumb.webp";
 import PortfolioThumb from "../../../public/portfolio-thumb.webp";
 
+export const metadata = {
+  title: "Projects | Rohit Tokala",
+  description: "Rohit Tokala's projects page",
+};
+
 function ProjectsPage() {
   return (
     <div className=" h-fit flex bg-base-300 gap-4 pb-4 flex-col items-center w-full">
