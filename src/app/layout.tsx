@@ -9,6 +9,18 @@ export const metadata = {
   title: "Rohit Tokala",
   description: "Personal website of Rohit Tokala",
   metadataBase: new URL("https://tokala.dev/"),
+  openGraph: {
+    type: "website",
+    url: "https://tokala.dev/",
+    title: "Rohit Tokala",
+    description: "Personal website of Rohit Tokala",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rohit Tokala",
+    description: "Personal website of Rohit Tokala",
+    site: "@TokalaRohit",
+  },
 };
 
 export default function RootLayout({

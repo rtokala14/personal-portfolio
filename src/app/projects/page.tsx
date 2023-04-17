@@ -8,6 +8,18 @@ import PortfolioThumb from "../../../public/portfolio-thumb.webp";
 export const metadata = {
   title: "Projects | Rohit Tokala",
   description: "Rohit Tokala's projects page",
+  openGraph: {
+    type: "website",
+    url: "https://tokala.dev/projects",
+    title: "Projects | Rohit Tokala",
+    description: "Rohit Tokala's projects page",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Projects | Rohit Tokala",
+    description: "Rohit Tokala's projects page",
+    site: "@TokalaRohit",
+  },
 };
 
 function ProjectsPage() {
