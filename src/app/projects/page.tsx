@@ -24,7 +24,7 @@ export const metadata = {
 
 function ProjectsPage() {
   return (
-    <div className=" h-fit flex bg-base-300 gap-4 pb-4 flex-col items-center w-full">
+    <div className=" h-fit flex bg-base-200 gap-4 pb-4 flex-col items-center w-full">
       <h1 className=" font-semibold pt-6 text-3xl">
         {"Some of things I've built"}
       </h1>

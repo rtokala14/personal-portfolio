@@ -22,6 +22,7 @@ function ThemeChanger() {
           setTheme("black");
         }
       }}
+      aria-label="Toggle Dark Mode"
       className=" btn btn-ghost btn-square rounded-md"
     >
       {theme === "black" ? <Moon /> : <Sun />}

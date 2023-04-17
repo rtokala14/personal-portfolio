@@ -90,6 +90,7 @@ export default function RootLayout({
                       rel="noreferer"
                       target="_blank"
                       href={"https://github.com/rtokala14"}
+                      aria-label="Link to Rohit's Github"
                       className="btn btn-ghost btn-square rounded-md"
                     >
                       <Github />
