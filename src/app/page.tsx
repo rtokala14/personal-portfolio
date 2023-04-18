@@ -10,7 +10,7 @@ export default function Home() {
           <p className=" text-sm italic">An aspiring full stack developer...</p>
           <p className=" pt-2 break-words text-lg">
             {
-              "Recently Graduated from Purdue with a degree in Computer Engineering, I have been learning about web development for a little over a year and am looking for postitions where I can contribute as well as learn more about the industry."
+              "Recently Graduated from Purdue with a degree in Computer Engineering, I have been learning web development for a little over a year and am looking for a postition where I can contribute to the success of the company."
             }
           </p>
           <Link className="pt-4" href={"/contact"}>

@@ -1,3 +1,5 @@
+import FormBox from "@/components/FormBox";
+
 export const metadata = {
   title: "Contact | Rohit Tokala",
   description: "Rohit Tokala's Contact page",
@@ -16,7 +18,11 @@ export const metadata = {
 };
 
 function ContactPage() {
-  return <div>ContactPage</div>;
+  return (
+    <div className=" h-screen bg-base-200 pb-16 w-full flex items-center justify-center">
+      <FormBox />
+    </div>
+  );
 }
 
 export default ContactPage;
