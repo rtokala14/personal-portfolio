@@ -12,4 +12,5 @@ module.exports = {
   daisyui: {
     themes: ["lofi", "black"],
   },
+  darkMode: ["class", "[data-theme=black]"],
 };
