@@ -17,7 +17,13 @@ export const metadata = {
 
 function AboutPage() {
   return (
-    <div className=" min-h-screen bg-base-200 w-full flex flex-col items-center justify-start md:justify-center pb-16 ">
+    <div className=" bg-base-200 w-full flex flex-col lg:flex-row items-center justify-start lg:justify-evenly pb-16 ">
+      <div className=" flex flex-col items-center mb-6 mt-8 lg:mb-0 justify-center">
+        <h2 className=" text-3xl font-medium">About Me</h2>
+        <p className=" text-center">
+          {"A little timeline of what I've been up to the last few years."}
+        </p>
+      </div>
       <div className=" flex flex-col max-w-3xl pl-1 pr-3 md:px-14">
         <TimeSet
           timeStr="Dec 2022"
