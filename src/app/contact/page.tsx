@@ -19,7 +19,13 @@ export const metadata = {
 
 function ContactPage() {
   return (
-    <div className=" h-screen bg-base-200 pb-16 w-full flex items-center justify-center">
+    <div className=" h-screen bg-base-200 pb-16 w-full flex flex-col gap-4 items-center justify-center">
+      <h2 className=" text-4xl font-medium">{"Contact Me"}</h2>
+      <p className=" text-lg text-center mb-8">
+        {
+          "If you have any questions or would like to get in touch, please fill out the form below."
+        }
+      </p>
       <FormBox />
     </div>
   );
