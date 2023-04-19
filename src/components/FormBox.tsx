@@ -5,6 +5,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Send } from "lucide-react";
 import { send } from "@emailjs/browser";
+import { Toaster, toast } from "react-hot-toast";
 
 const formSchema = z.object({
   name: z.string().min(1, "Name is required").max(30, "Name is too long"),
@@ -29,15 +30,22 @@ function FormBox() {
 
   const onSubmit: SubmitHandler<formSchemaType> = (data) => {
     if (isValid) {
-      send(
-        "service_gd446je",
-        "template_2g0b2rj",
+      toast.promise(
+        send(
+          "service_gd446je",
+          "template_2g0b2rj",
+          {
+            senderName: data.name,
+            senderEmail: data.email,
+            contentBody: data.message,
+          },
+          "cf_Suv06HKXB6mJk5"
+        ),
         {
-          senderName: data.name,
-          senderEmail: data.email,
-          contentBody: data.message,
-        },
-        "cf_Suv06HKXB6mJk5"
+          loading: "Sending...",
+          success: "Message Sent!",
+          error: "Something went wrong!",
+        }
       );
     }
     reset();
@@ -47,6 +55,8 @@ function FormBox() {
       onSubmit={handleSubmit(onSubmit)}
       className=" form-control max-w-xl w-full px-2"
     >
+      <Toaster position="bottom-left" reverseOrder={false} />
+
       <label className="label">
         <span className="label-text">Your Name</span>
       </label>
@@ -81,7 +91,7 @@ function FormBox() {
         <span className=" capitalize ml-2">Send</span>
       </button>
 
-      {isSubmitSuccessful && (
+      {/* {isSubmitSuccessful && (
         <div className=" toast toast-start">
           <div className=" alert alert-success">
             <div>
@@ -89,7 +99,7 @@ function FormBox() {
             </div>
           </div>
         </div>
-      )}
+      )} */}
     </form>
   );
 }
