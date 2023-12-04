@@ -24,8 +24,8 @@ dependencies:
     specifier: 10.4.14
     version: 10.4.14(postcss@8.4.24)
   daisyui:
-    specifier: ^3.0.0
-    version: 3.0.0(postcss@8.4.24)
+    specifier: ^4.0.0
+    version: 4.4.19(postcss@8.4.24)
   eslint:
     specifier: 8.43.0
     version: 8.43.0
@@ -690,10 +690,6 @@ packages:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
     dev: false
 
-  /colord@2.9.3:
-    resolution: {integrity: sha512-jeC1axXpnb0/2nn/Y1LPuLdgXBLH7aDcHu4KEKfqw3CUhX7ZpfBSlPKyqXE6btIgEzfWtrX3/tyBCaCvXvMkOw==}
-    dev: false
-
   /commander@4.1.1:
     resolution: {integrity: sha512-NOKm8xhkzAjzFx8B2v5OAHT+u5pRQc2UCa2Vq9jYL/31o2wi9mxBA7LIFs3sV5VSC49z6pEhfbMULvShKj26WA==}
     engines: {node: '>= 6'}
@@ -729,18 +725,21 @@ packages:
     resolution: {integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==}
     dev: false
 
-  /daisyui@3.0.0(postcss@8.4.24):
-    resolution: {integrity: sha512-EuNK9JQd5yrPLDynAPQkG/29vjZXFWhBK4HXvM83d9oJU0EmF35UNLLs0cslBFfLK4b+bOuhgoYPJ4BjytOxNQ==}
-    peerDependencies:
-      postcss: ^8
+  /culori@3.3.0:
+    resolution: {integrity: sha512-pHJg+jbuFsCjz9iclQBqyL3B2HLCBF71BwVNujUYEvCeQMvV97R59MNK3R2+jgJ3a1fcZgI9B3vYgz8lzr/BFQ==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dev: false
+
+  /daisyui@4.4.19(postcss@8.4.24):
+    resolution: {integrity: sha512-IjOLWwnndD4N7Ut5CDxbUsaVtbqXPeVHM92IcgxGFxpuOd3CCKW/PAXZH6JoBTHFRaN57vB9XqEhdWm5yC+bPA==}
+    engines: {node: '>=16.9.0'}
     dependencies:
-      colord: 2.9.3
       css-selector-tokenizer: 0.8.0
-      postcss: 8.4.24
+      culori: 3.3.0
+      picocolors: 1.0.0
       postcss-js: 4.0.1(postcss@8.4.24)
-      tailwindcss: 3.3.2
     transitivePeerDependencies:
-      - ts-node
+      - postcss
     dev: false
 
   /damerau-levenshtein@1.0.8:
