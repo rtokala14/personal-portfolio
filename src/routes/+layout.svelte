@@ -1,6 +1,9 @@
-<script>
+<script lang="ts">
+	import { tweened } from 'svelte/motion';
 	import '../app.css';
 	import { Navbar, NavBrand, NavUl, NavLi, uiHelpers, Button, NavHamburger } from 'svelte-5-ui-lib';
+	import { cubicOut } from 'svelte/easing';
+	import { onMount } from 'svelte';
 
 	let { children } = $props();
 	let nav = uiHelpers();
@@ -10,7 +13,32 @@
 	$effect(() => {
 		navStatus = nav.isOpen;
 	});
+
+	let mouseX = $state(0);
+	let mouseY = $state(0);
+
+	const opacity = tweened(0, {
+		duration: 500,
+		easing: cubicOut
+	});
+
+	onMount(() => {
+		opacity.set(1);
+	});
+
+	function handleMouseMove(event: MouseEvent) {
+		mouseX = event.clientX;
+		mouseY = event.clientY;
+	}
 </script>
+
+<svelte:window on:mousemove={handleMouseMove} />
+
+<div
+	class="absolute inset-0 z-0 opacity-10"
+	style:background-image=" radial-gradient(circle at {mouseX}px {mouseY}px, rgba(79, 209, 197, 0.3)
+	0%, rgba(79, 209, 197, 0) 50%)"
+></div>
 
 <Navbar
 	breakPoint="md"
