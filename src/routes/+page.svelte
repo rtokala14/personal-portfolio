@@ -44,9 +44,9 @@
 </div>
 
 <!-- ScrollWheel -->
-<div class=" flex h-[40vh] w-full max-w-4xl flex-col items-center gap-4">
+<div class=" flex h-[40vh] w-full max-w-4xl flex-col items-center gap-4 px-6">
 	<h2 class=" text-3xl font-extrabold uppercase tracking-wider text-primary-600">My Toolkit</h2>
-	<div class=" flex flex-wrap items-center justify-center gap-4 *:h-20 *:rounded-lg *:shadow-md">
+	<div class=" flex flex-wrap items-center justify-center gap-4 *:h-16 *:rounded-lg *:shadow-md">
 		<img src="/react.png" alt="React Web Framework" />
 		<img src="/github.png" alt="React Web Framework" />
 		<img src="/nextjs.png" alt="React Web Framework" />

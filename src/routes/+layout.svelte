@@ -1,6 +1,20 @@
 <script lang="ts">
 	import '../app.css';
-	import { Navbar, NavBrand, NavUl, NavLi, uiHelpers, Button, NavHamburger } from 'svelte-5-ui-lib';
+	import {
+		Navbar,
+		NavBrand,
+		NavUl,
+		NavLi,
+		uiHelpers,
+		Button,
+		NavHamburger,
+		Footer,
+		FooterBrand,
+		FooterLi,
+		FooterUl,
+		FooterCopyright,
+		FooterIcon
+	} from 'svelte-5-ui-lib';
 	import { GithubSolid, LinkedinSolid, XSolid, EnvelopeSolid } from 'flowbite-svelte-icons';
 
 	let { children } = $props();
@@ -47,7 +61,7 @@
 	{/snippet}
 	{#snippet navSlotBlock()}
 		<div class="flex items-center space-x-1 md:order-2">
-			<Button size="md">Contact Me!</Button>
+			<Button class="text-black" size="md">Contact Me!</Button>
 		</div>
 	{/snippet}
 	<NavUl class="order-1 *:dark:bg-gray-800 md:dark:bg-gray-800">
@@ -91,3 +105,59 @@
 
 <!-- Main Content -->
 {@render children()}
+
+<!-- Footer -->
+
+<Footer footerType="socialmedia" class="w-full max-w-5xl">
+	<div class="md:flex md:justify-between">
+		<div class="mb-6 md:mb-0">
+			<FooterBrand href="/" src="/svelte.png" alt="Rohit Tokala" name="Rohit Tokala" />
+		</div>
+		<div class="grid grid-cols-2 gap-8">
+			<div>
+				<h2 class="mb-6 text-sm font-semibold uppercase text-gray-900 dark:text-white">Explore</h2>
+				<FooterUl>
+					<FooterLi liClass="mb-4" href="/about">About Me</FooterLi>
+					<FooterLi liClass="mb-4" href="/projects">My Projects</FooterLi>
+				</FooterUl>
+			</div>
+			<div>
+				<h2 class="mb-6 text-sm font-semibold uppercase text-gray-900 dark:text-white">Dive In</h2>
+				<FooterUl>
+					<FooterLi liClass="mb-4" href="/">Blog</FooterLi>
+					<FooterLi liClass="mb-4" href="/contact">Contact Me</FooterLi>
+				</FooterUl>
+			</div>
+		</div>
+	</div>
+	<hr class="my-6 border-gray-200 dark:border-gray-700 sm:mx-auto lg:my-8" />
+	<div class="sm:flex sm:items-center sm:justify-between">
+		<FooterCopyright href="/" by="Rohit Tokala" />
+		<div class="mt-4 flex space-x-6 sm:mt-0 sm:justify-center rtl:space-x-reverse">
+			<FooterIcon
+				target="_blank"
+				referrerpolicy="no-referrer"
+				href="https://linkedin.com/in/rohit-tokala"
+			>
+				<LinkedinSolid
+					class="h-5 w-5 text-gray-500 hover:text-gray-900 dark:text-gray-500 dark:hover:text-white"
+				/>
+			</FooterIcon>
+			<FooterIcon target="_blank" referrerpolicy="no-referrer" href="mailto://tokalarr@gmail.com">
+				<EnvelopeSolid
+					class="h-5 w-5 text-gray-500 hover:text-gray-900 dark:text-gray-500 dark:hover:text-white"
+				/>
+			</FooterIcon>
+			<FooterIcon target="_blank" referrerpolicy="no-referrer" href="https://x.com/TokalaRohit">
+				<XSolid
+					class="h-5 w-5 text-gray-500 hover:text-gray-900 dark:text-gray-500 dark:hover:text-white"
+				/>
+			</FooterIcon>
+			<FooterIcon target="_blank" referrerpolicy="no-referrer" href="https://github.com/rtokala14">
+				<GithubSolid
+					class="h-5 w-5 text-gray-500 hover:text-gray-900 dark:text-gray-500 dark:hover:text-white"
+				/>
+			</FooterIcon>
+		</div>
+	</div>
+</Footer>
