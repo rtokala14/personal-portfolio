@@ -1,9 +1,7 @@
 <script lang="ts">
-	import { tweened } from 'svelte/motion';
 	import '../app.css';
 	import { Navbar, NavBrand, NavUl, NavLi, uiHelpers, Button, NavHamburger } from 'svelte-5-ui-lib';
-	import { cubicOut } from 'svelte/easing';
-	import { onMount } from 'svelte';
+	import { GithubSolid, LinkedinSolid, XSolid, EnvelopeSolid } from 'flowbite-svelte-icons';
 
 	let { children } = $props();
 	let nav = uiHelpers();
@@ -17,15 +15,6 @@
 	let mouseX = $state(0);
 	let mouseY = $state(0);
 
-	const opacity = tweened(0, {
-		duration: 500,
-		easing: cubicOut
-	});
-
-	onMount(() => {
-		opacity.set(1);
-	});
-
 	function handleMouseMove(event: MouseEvent) {
 		mouseX = event.clientX;
 		mouseY = event.clientY;
@@ -34,12 +23,14 @@
 
 <svelte:window on:mousemove={handleMouseMove} />
 
+<!-- Background spotlight -->
 <div
-	class="absolute inset-0 z-0 opacity-10"
+	class="absolute inset-0 -z-50 opacity-10"
 	style:background-image=" radial-gradient(circle at {mouseX}px {mouseY}px, rgba(79, 209, 197, 0.3)
 	0%, rgba(79, 209, 197, 0) 50%)"
 ></div>
 
+<!-- NavBar -->
 <Navbar
 	breakPoint="md"
 	{toggleNav}
@@ -65,4 +56,38 @@
 		<NavLi href="/about">About Me</NavLi>
 	</NavUl>
 </Navbar>
+
+<!-- Social Links -->
+<div class=" fixed right-1 top-1/2 z-50 flex w-10 -translate-y-1/2 flex-col rounded-l-md">
+	<Button
+		target="_blank"
+		referrerpolicy="no-referrer"
+		class="rounded-none rounded-tl-md "
+		color="light"
+		href="https://github.com/rtokala14"><GithubSolid class="h-7 w-7" /></Button
+	>
+	<Button
+		target="_blank"
+		referrerpolicy="no-referrer"
+		class="rounded-none"
+		color="light"
+		href="https://linkedin.com/in/rohit-tokala"><LinkedinSolid class="h-7 w-7" /></Button
+	>
+	<Button
+		target="_blank"
+		referrerpolicy="no-referrer"
+		class="rounded-none"
+		color="light"
+		href="https://x.com/TokalaRohit"><XSolid class="h-7 w-7" /></Button
+	>
+	<Button
+		target="_blank"
+		referrerpolicy="no-referrer"
+		class="rounded-none rounded-bl-md"
+		color="light"
+		href="mailto://tokalarr@gmail.com"><EnvelopeSolid class="h-7 w-7" /></Button
+	>
+</div>
+
+<!-- Main Content -->
 {@render children()}
