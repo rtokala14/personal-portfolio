@@ -11,6 +11,7 @@
 </script>
 
 <div class=" mt-2 flex h-[70vh] w-full max-w-7xl flex-col items-center justify-center gap-2 p-2">
+	<!-- Landing Hero -->
 	<div class=" flex max-w-3xl flex-col items-center gap-4 p-2">
 		{#if introAni}
 			<div in:fly={{ y: -20, duration: 500, delay: 0 }}>
@@ -39,5 +40,21 @@
 				>
 			</div>
 		{/if}
+	</div>
+</div>
+
+<!-- ScrollWheel -->
+<div class=" flex h-[40vh] w-full max-w-4xl flex-col items-center gap-4">
+	<h2 class=" text-3xl font-extrabold uppercase tracking-wider text-primary-600">My Toolkit</h2>
+	<div class=" flex flex-wrap items-center justify-center gap-4 *:h-20 *:rounded-lg *:shadow-md">
+		<img src="/react.png" alt="React Web Framework" />
+		<img src="/github.png" alt="React Web Framework" />
+		<img src="/nextjs.png" alt="React Web Framework" />
+		<img src="/svelte.png" alt="React Web Framework" />
+		<img src="/pytorch.png" alt="React Web Framework" />
+		<img src="/python.png" alt="React Web Framework" />
+		<img src="/flask.png" alt="React Web Framework" />
+		<img src="/docker.png" alt="React Web Framework" />
+		<img src="/aws.png" alt="React Web Framework" />
 	</div>
 </div>
