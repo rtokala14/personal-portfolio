@@ -61,13 +61,13 @@
 	{/snippet}
 	{#snippet navSlotBlock()}
 		<div class="flex items-center space-x-1 md:order-2">
-			<Button class="text-black" size="md">Contact Me!</Button>
+			<Button class="text-black" size="md" href="/contact">Contact Me!</Button>
 		</div>
 	{/snippet}
 	<NavUl class="order-1 *:dark:bg-gray-800 md:dark:bg-gray-800">
 		<NavLi href="/">Home</NavLi>
 		<NavLi href="/projects">Projects</NavLi>
-		<NavLi href="/about">About Me</NavLi>
+		<!-- <NavLi href="/about">About Me</NavLi> -->
 	</NavUl>
 </Navbar>
 

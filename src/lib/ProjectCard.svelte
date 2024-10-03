@@ -8,7 +8,7 @@
 		desc,
 		href,
 		gitLink
-	}: { src: string; alt: string; title: string; desc: string; href: string; gitLink?: string } =
+	}: { src: string; alt: string; title: string; desc: string; href?: string; gitLink?: string } =
 		$props();
 </script>
 
@@ -30,13 +30,15 @@
 				Github
 			</Button>
 		{/if}
-		<Button
-			{href}
-			class=" w-full text-black"
-			size="lg"
-			color="teal"
-			target="_blank"
-			referrerpolicy="no-referrer">Live Page</Button
-		>
+		{#if href}
+			<Button
+				{href}
+				class=" w-full text-black"
+				size="lg"
+				color="teal"
+				target="_blank"
+				referrerpolicy="no-referrer">Live Page</Button
+			>
+		{/if}
 	</div>
 </Card>
